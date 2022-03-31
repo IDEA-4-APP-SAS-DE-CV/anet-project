@@ -1,0 +1,23 @@
+.icons{
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.boxIcon{
+  border: 1px solid var(--nextui-colors-lightBorder);
+  width: 200px;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+.boxIcon h1{
+  font-size: 60px;
+}
+
+.boxIcons span{
+  font-size: 11px!important;
+  font-weight: 400!important;
+}

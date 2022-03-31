@@ -1,0 +1,20 @@
+.menu{
+  position: absolute;
+  top: 0;
+  left: -220px;
+  width: 220px;
+  height: 100%;
+  background: var(--nextui-colors-sidebarBg);
+  z-index: 999;
+  padding: 20px 14px;
+  transition: 0.3s;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+}
+
+.menu.active{
+  left: 0px;
+}
+
+.containerMenu{
+  margin: 30px 0;
+}

@@ -1,0 +1,117 @@
+.registro{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  
+}
+
+.form{
+  width: 720px;
+  height: 600px;
+  overflow: hidden;
+  border-radius: 10px;
+  background-color: white;
+  display: flex;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+}
+
+.formLogin{
+  width: 720px;
+  height: 500px;
+  overflow: hidden;
+  border-radius: 10px;
+  background-color: white;
+  display: flex;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+}
+
+.backForm {
+  background: linear-gradient(270deg, #c3c3c3, #ffffff, #727272, #ffffff );
+  background-size: 1200% 1200%;
+  -webkit-animation: back 120s ease infinite;
+  -moz-animation: back 120s ease infinite;
+  animation: back 120s ease infinite;
+}
+
+@-webkit-keyframes back {
+  0%{background-position:0% 50%}
+  50%{background-position:100% 50%}
+  100%{background-position:0% 50%}
+}
+@-moz-keyframes back {
+  0%{background-position:0% 50%}
+  50%{background-position:100% 50%}
+  100%{background-position:0% 50%}
+}
+@keyframes back {
+  0%{background-position:0% 50%}
+  50%{background-position:100% 50%}
+  100%{background-position:0% 50%}
+}
+
+.controls{
+  width: 100%;
+  padding: 30px 30px 30px 40px;
+}
+
+.right{
+  width: 53%;
+  height: 100%;
+  background: #1488CC;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to top, #2B32B2, #11ccd5);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to top, #2B32B2, #11ccd5); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  padding: 0 30px;
+}
+
+.right p{
+  text-align: center;
+}
+
+.form .right{
+  width: 45%;
+}
+
+.form .left{
+  width: 55%;
+}
+
+.form .left .controls{
+  padding: 20px 20px 20px 30px;
+}
+
+.row{
+  display: flex;
+}
+
+.disclaimer{
+  font-size: 14px;
+}
+
+.left{
+  width: 47%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.submit {
+  padding: 12px 15px;
+  border:0 none;
+  cursor:pointer;
+  -webkit-border-radius: 5px;
+  border-radius: 20px; 
+  width: 100%;
+  background-color: #0070f3;
+  color: white;
+  font-size: 14px;
+}

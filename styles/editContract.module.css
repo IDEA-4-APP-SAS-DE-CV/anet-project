@@ -1,0 +1,45 @@
+.wrapperForm{
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 20px;
+}
+
+.disclaimer{
+  margin-bottom: 50px;
+}
+
+.text{
+  margin-bottom: 30px;
+}
+
+.btn_approvers{
+  margin-top: 20px;
+}
+
+.wrapperRowFile{
+  border: 2px dashed var(--nextui-colors-lightBorder);
+  border-radius: 10px;
+  padding: 16px;
+  margin: 30px 0;
+}
+
+.fileInput{
+  background-color: rgba(255,255,255,0.9);
+  color: gray;
+  padding: 9px;
+  border-radius: 5px;
+  width: 100%;
+}
+
+.wrapperRowInputSuccess{
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.title{
+  font-weight: bold;
+  color: var(--nextui-colors-warning)
+}

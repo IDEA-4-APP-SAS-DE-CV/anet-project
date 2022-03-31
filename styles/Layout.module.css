@@ -1,0 +1,6 @@
+.container{
+  position: inherit;
+  width: 100%;
+  min-height: 600px;
+  background: var(--nextui-colors-secondaryBg);
+}
