@@ -20,6 +20,9 @@ import Layout from "../../components/Layout";
 //contextProfile
 import { useAppContext } from "../../context/profileContext";
 
+// Constants
+import { BASE_URL_API } from '../../constants'
+
 function Pop({ visible, closeHandler, setComments, comments, addComment }) {
   return (
     <Modal
@@ -94,7 +97,7 @@ export default function Autorizacion({ data }) {
         contract.approvals[i].approved = type;
       }
     }
-    fetch("/api/contracts", {
+    fetch(`${BASE_URL_API}/contracts`, {
       method: "PUT",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(contract),
@@ -125,7 +128,7 @@ export default function Autorizacion({ data }) {
 
     console.log({ updateComments });
 
-    fetch("api/contracts", {
+    fetch(`${BASE_URL_API}/contracts`, {
       method: "PATCH",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(updateComments),
@@ -189,7 +192,7 @@ export default function Autorizacion({ data }) {
 export async function getServerSideProps(context) {
   const contractId = context.query.contract;
   const res = await fetch(
-    `http://localhost:3000/api/contracts?id=${contractId}`
+    `${BASE_URL_API}/contracts?id=${contractId}`
   );
   const data = await res.json();
   // Pass data to the page via props

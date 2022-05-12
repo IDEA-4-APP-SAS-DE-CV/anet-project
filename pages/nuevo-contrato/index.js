@@ -15,6 +15,9 @@ import styles from "@/styles/newContract.module.css";
 //contextProfile
 import { useAppContext } from "../../context/profileContext";
 
+// Constants
+import { BASE_URL_API } from '../../constants'
+
 //Constants
 const CONTRACT_TEMPLATE = {
   name: "",
@@ -73,7 +76,7 @@ export default function NuevoContrato() {
       CONTRACT_TEMPLATE.file.length > 0 &&
       CONTRACT_TEMPLATE.name
     ) {
-      fetch("api/contracts", {
+      fetch(`${BASE_URL_API}/contracts`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(CONTRACT_TEMPLATE),
@@ -101,7 +104,7 @@ export default function NuevoContrato() {
 
   function sendMessage() {
     console.log();
-    fetch("http://localhost:3000/api/mailTransactions", {
+    fetch(`${BASE_URL_API}/mailTransactions`, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({
@@ -175,13 +178,6 @@ export default function NuevoContrato() {
               />
             </div>
           </div>
-          <div className={styles.wrapperRowFile}>
-            <input
-              type="file"
-              onChange={handleFile}
-              className={styles.fileInput}
-            />
-          </div>
           <div className={styles.wrapperRowInput}>
             <div className={styles.middleText}>
               <p className={styles.text}></p>* Es necesario elegir por lo menos
@@ -193,6 +189,13 @@ export default function NuevoContrato() {
                 Agregar Aprobadores
               </Button>
             </div>
+          </div>
+          <div className={styles.wrapperRowFile}>
+            <input
+              type="file"
+              onChange={handleFile}
+              className={styles.fileInput}
+            />
           </div>
           <div className={styles.wrapperRowInputSuccess}>
             <div className={styles.middleText}>

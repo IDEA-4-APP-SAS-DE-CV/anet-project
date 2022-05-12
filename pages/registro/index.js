@@ -8,6 +8,9 @@ import styles from "@/styles/registro.module.css";
 // Components
 import { useAppContext } from "../../context/profileContext";
 
+// Constants
+import { BASE_URL_API } from '../../constants';
+
 export default function Registro() {
   const router = useRouter();
   const { setVariableState } = useAppContext();
@@ -33,7 +36,7 @@ export default function Registro() {
       enterprise: "",
     };
 
-    const register = await fetch("http://localhost:3000/api/register", {
+    const register = await fetch(`${BASE_URL_API}/register`, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(userRegister),

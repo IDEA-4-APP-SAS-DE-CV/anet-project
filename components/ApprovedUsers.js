@@ -7,6 +7,7 @@ import { Input, Card, Grid, Avatar, Button, Spacer } from "@nextui-org/react";
 import styles from "@/styles/approvedList.module.css";
 
 //Constantes
+import { BASE_URL_API } from '../constants';
 
 export default function ApprovedUsers({
   setViewApproveds,
@@ -49,7 +50,7 @@ export default function ApprovedUsers({
 
   useEffect(() => {
     setTimeout(() => {
-      fetch(`http://localhost:3000/api/search?name=${search}`, {})
+      fetch(`${BASE_URL_API}/search?name=${search}`, {})
         .then((res) => res.json())
         .then((res) => setSearchedList(res.data));
     }, 1000);

@@ -10,9 +10,12 @@ import Layout from "components/Layout";
 //Utils
 import format from "../../util/format";
 
+// Constants
+
 import { FcApproval, FcBookmark } from "react-icons/fc";
 import { ImFilePdf } from "react-icons/im";
 import { BiXCircle } from "react-icons/bi";
+import { BASE_URL_API } from "../../constants";
 
 export default function Contrato({ data }) {
   const [contrato, setContrato] = useState(data?.data[0]);
@@ -23,7 +26,7 @@ export default function Contrato({ data }) {
 
   function sendReminder(mail, name, type, title, idContract) {
     console.log();
-    fetch("api/mailReminder", {
+    fetch(`${BASE_URL_API}/mailReminder`, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({
@@ -221,7 +224,7 @@ export default function Contrato({ data }) {
 export async function getServerSideProps(context) {
   const contractId = context.query.contract;
   const res = await fetch(
-    `http://localhost:3000/api/contracts?id=${contractId}`
+    `${BASE_URL_API}/contracts?id=${contractId}`
   );
   const data = await res.json();
   // Pass data to the page via props

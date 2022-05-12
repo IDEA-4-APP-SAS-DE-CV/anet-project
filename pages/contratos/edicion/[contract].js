@@ -14,6 +14,9 @@ import Layout from "../../../components/Layout";
 //contextProfile
 import { useAppContext } from "../../../context/profileContext";
 
+// Constants
+import { BASE_URL_API } from '../../../constants';
+
 function Pop({ visible, closeHandler, setComments, comments, addComment }) {
   return (
     <Modal
@@ -132,7 +135,7 @@ export default function EditContract({ data }) {
 export async function getServerSideProps(context) {
   const contractId = context.query.contract;
   const res = await fetch(
-    `http://localhost:3000/api/contracts?id=${contractId}`
+    `${BASE_URL_API}/contracts?id=${contractId}`
   );
   const data = await res.json();
   // Pass data to the page via props
