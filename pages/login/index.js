@@ -10,6 +10,9 @@ import { useAppContext } from "../../context/profileContext";
 // Styles
 import styles from "@/styles/registro.module.css";
 
+// Constants
+import { BASE_URL_API } from '../../constants';
+
 export default function Login() {
   const { variableState, setVariableState } = useAppContext();
   const [userName, setUserName] = useState("");
@@ -31,7 +34,7 @@ export default function Login() {
       username: userName,
       password: password,
     };
-    const res = await fetch("/api/login", {
+    const res = await fetch(`${BASE_URL_API}/login`, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(body),
@@ -39,7 +42,7 @@ export default function Login() {
 
     if (res.status === 200) {
       const logedUser = await res.json();
-      setVariableState(logedUser);
+      setVariableState(logedUser.data);
       window.localStorage.setItem("logedUser", JSON.stringify(logedUser));
       if (logedUser) router.push("/");
     }

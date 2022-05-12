@@ -23,7 +23,7 @@ export default function Contrato({ data }) {
 
   function sendReminder(mail, name, type, title, idContract) {
     console.log();
-    fetch("http://localhost:3000/api/mailReminder", {
+    fetch("api/mailReminder", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({

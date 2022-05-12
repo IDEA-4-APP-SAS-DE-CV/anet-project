@@ -1,6 +1,7 @@
 import { MongoClient } from "mongodb";
 
-const { MONGO_URI } = process.env;
+const MONGO_URI =
+  "mongodb+srv://starla:Apples01@anet-io.pztc9.mongodb.net/anet-db?retryWrites=true&w=majority";
 const options = {};
 
 let client;

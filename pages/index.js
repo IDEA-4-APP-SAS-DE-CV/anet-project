@@ -8,8 +8,8 @@ export default function Home() {
   return (
     <Layout>
       <div className={styles.home}>
-        <h1>Home</h1>
-        <main>Contenido de Home</main>
+        <h1>Pantalla de inicio (Dashboard)</h1>
+        <main>Esta secición muestra el contenido de cada categoría</main>
       </div>
     </Layout>
   );

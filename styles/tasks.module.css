@@ -1,0 +1,134 @@
+.tasks{
+  padding: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.tasksHead{
+  background-color: var(--nextui-colors-primaryBg);
+  border: 1px solid var(--nextui-colors-lightBorder);
+  width: 100%;
+  padding: 10px;
+  border-radius: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.tasksHead h3{
+  margin: 0;
+}
+
+.tasksList{
+  background-color: var(--nextui-colors-primaryBg);
+  border: 1px solid var(--nextui-colors-lightBorder);
+  width: 100%;
+  padding: 10px;
+  border-radius: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.tasksForm{
+  background-color: var(--nextui-colors-primaryBg);
+  border: 1px solid var(--nextui-colors-lightBorder);
+  width: 700px;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.pending{ color: #ffca00; margin: 0; }
+.success{ color: #00eb00; margin: 0;}
+.cancel{ color: #d11400; margin: 0;}
+
+.taskList{
+  width: 100%;
+  height: 600px;
+  margin-top: 20px;
+  padding: 50px 10px 10px 10px;
+  border-radius: 10px;
+  background-color: var(--nextui-colors-primaryBg);
+  border: 1px solid var(--nextui-colors-lightBorder);
+  position: relative;
+  overflow: scroll;
+}
+
+
+.rowTaskHead{
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 20px;
+  position: absolute;
+  top: 1px;
+  left: 0;
+  width: 100%;
+  border-bottom: 1px solid var(--nextui-colors-lightBorder);
+  font-weight: 700;
+  font-size: 14px;
+  background-color: var(--nextui-colors-primaryBg);
+}
+
+.rowTask{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  font-size: 13px;
+  border-bottom: 1px solid var(--nextui-colors-lightBorder);
+}
+
+.controlRow{
+  display: flex;
+  justify-content: flex-end;
+}
+
+.shortField{
+  width: 20%;
+}
+
+.largeField{
+  width: 40%;
+}
+
+.rowTask:hover{
+  cursor: pointer;
+  background-color: var(--nextui-colors-lightBorder);
+  border-radius: 8px;
+}
+
+.viewMore {
+  background-color: var(--nextui-colors-lightBorder);
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 3px;
+}
+
+.drops{
+  width: 100%;
+    border-radius: 10px;
+    height: 40px;
+    padding: 0 10px
+}
+
+.containerDetailTask{
+  background-color: var(--nextui-colors-primaryBg);
+  border: 1px solid var(--nextui-colors-lightBorder);
+  width: 70%;
+  padding: 25px;
+  border-radius: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-direction: column;
+  text-align: left;
+}

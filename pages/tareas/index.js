@@ -1,27 +1,29 @@
 import { useState } from "react";
+
 import {
-  Button,
   Grid,
   Avatar,
+  Button,
+  Link,
   Modal,
-  Checkbox,
   Text,
   Row,
+  Input,
+  Spacer,
 } from "@nextui-org/react";
 
-import Link from "next/link";
-
-//Components
-import Layout from "../../components/Layout";
-
 //Styles
-import styles from "@/styles/contratos.module.css";
+import styles from "@/styles/tasks.module.css";
+import globals from "@/styles/globals.module.css";
 
 //Utils
 import format from "../../util/format";
 
-// Constants
-import { BASE_URL_API } from '../../constants';
+// Contexto
+import { useAppContext } from "../../context/profileContext";
+
+//Components
+import Layout from "../../components/Layout";
 
 //Icons
 import {
@@ -30,11 +32,7 @@ import {
   MdDeleteForever,
 } from "react-icons/md";
 
-function deleteContract(_id) {
-  console.log({ idContract });
-}
-
-function Pop({ visible, closeHandler, idContract }) {
+function Pop({ visible, closeHandler }) {
   return (
     <Modal
       closeButton
@@ -45,34 +43,54 @@ function Pop({ visible, closeHandler, idContract }) {
     >
       <Modal.Header>
         <Text id="modal-title" size={18}>
-          ¿Estas seguro de querer borrar este contrato?
+          Llena el formulario para agregar una nueva tarea
         </Text>
       </Modal.Header>
       <Modal.Body>
-        <Row justify="space-between"></Row>
+        <Row justify="space-between">
+          <Input
+            label="Titulo"
+            bordered
+            placeholder="Titulo de la tarea"
+            width="100%"
+          />
+        </Row>
+        <Row justify="space-between">
+          <Input
+            bordered
+            label="Detalle"
+            placeholder="Description de la tarea"
+            width="100%"
+          />
+        </Row>
+        <Spacer y={0.5} />
+        <Row justify="space-between">
+          <select className={styles.drops}>
+            <option>Selecciona Un Objetivo</option>
+            <option>Objetivo 1</option>
+            <option>Objetivo 2</option>
+            <option>Objetivo 3</option>
+            <option>Otros</option>
+          </select>
+        </Row>
+        <Spacer y={0.5} />
       </Modal.Body>
       <Modal.Footer>
-        <Button auto flat color="error" onClick={closeHandler}>
+        <Button auto color="error" onClick={closeHandler}>
           Cancelar
         </Button>
-        <Button
-          auto
-          onClick={() => {
-            //closeHandler()
-            deleteContract(idContract);
-          }}
-        >
-          Borrar
+        <Button auto color="success" onClick={closeHandler}>
+          Crear
         </Button>
       </Modal.Footer>
     </Modal>
   );
 }
 
-export default function Contracts({ contracts }) {
+export default function Tareas({ tasks }) {
+  //const { setVariableState } = useAppContext();
   const [visible, setVisible] = useState(false);
-  const contrato = contracts.data;
-  console.log({ contracts });
+  const listTask = tasks.data;
   const handler = () => setVisible(true);
   const closeHandler = () => {
     setVisible(false);
@@ -80,40 +98,29 @@ export default function Contracts({ contracts }) {
   };
   return (
     <Layout>
-      <div className={styles.contracts}>
-        {!!visible && (
-          <Pop
-            visible={visible}
-            closeHandler={closeHandler}
-            idContract={contrato._id}
-          />
-        )}
-        <div className={styles.headContracts}>
-          <p className={styles.title}>Mis contratos</p>
+      <div className={`${styles.tasks}`}>
+        {!!visible && <Pop visible={visible} closeHandler={closeHandler} />}
+        <div className={styles.tasksHead}>
+          <h3>Mis tareas</h3>
           <div className={styles.controls}>
-            <Button.Group color="primary" ghost>
-              <Link href="/nuevo-contrato">
-                <a>
-                  <Button>Nuevo contrato</Button>
-                </a>
-              </Link>
+            <Button.Group color="primary">
+              <Button onClick={handler}>Nueva tarea</Button>
             </Button.Group>
           </div>
         </div>
-        <div className={styles.contratosList}>
-          <div className={styles.rowContractHead}>
+        <div className={styles.taskList}>
+          <div className={styles.rowTaskHead}>
             <div className={styles.largeField}>Titulo</div>
             <div className={styles.shortField}>Estado</div>
             <div className={styles.shortField}>Fecha de creación</div>
             <div className={styles.shortField}></div>
           </div>
-          {contracts &&
-            contracts?.data?.map((item, key) => {
-              console.log({ item });
-              const { _id, name, status, createdAt } = item;
+          {listTask &&
+            listTask?.map((item, key) => {
+              const { _id, title, status, createdAt } = item;
               return (
-                <div key={key} className={styles.rowContract}>
-                  <div className={styles.largeField}>{name}</div>
+                <div key={key} className={styles.rowTask}>
+                  <div className={styles.largeField}>{title}</div>
                   <div className={styles.shortField}>
                     <Grid>
                       <Avatar
@@ -132,22 +139,19 @@ export default function Contracts({ contracts }) {
                     {format("DD de MM de YYYY", createdAt, true)}
                   </div>
                   <div className={`${styles.shortField} ${styles.controlRow}`}>
-                    <div
-                      className={styles.viewMore}
-                      onClick={() => deleteContract(_id)}
-                    >
+                    <div className={styles.viewMore}>
                       <MdDeleteForever size="22px" />
                     </div>
                     <div className={styles.viewMore}>
-                      <Link href={`/contratos/edicion/${_id}`}>
-                        <a>
+                      <Link href={`/tareas/${_id}`}>
+                        <a className={globals.link}>
                           <MdOutlineModeEdit size="22px" />
                         </a>
                       </Link>
                     </div>
                     <div className={styles.viewMore}>
-                      <Link href={`/contratos/${_id}`}>
-                        <a>
+                      <Link href={`/tareas/${_id}`}>
+                        <a className={globals.link}>
                           <MdMoreHoriz size="22px" />
                         </a>
                       </Link>
@@ -163,16 +167,16 @@ export default function Contracts({ contracts }) {
 }
 
 export async function getServerSideProps(context) {
-  const res = await fetch(`${BASE_URL_API}/contracts`, {
+  const res = await fetch(`/api/tasks`, {
     method: "GET",
     headers: {
       "Content.Type": "application/json",
     },
   });
 
-  const contracts = await res.json();
+  const tasks = await res.json();
 
   return {
-    props: { contracts },
+    props: { tasks },
   };
 }

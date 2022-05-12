@@ -94,7 +94,7 @@ export default function Autorizacion({ data }) {
         contract.approvals[i].approved = type;
       }
     }
-    fetch("http://localhost:3000/api/contracts", {
+    fetch("/api/contracts", {
       method: "PUT",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(contract),
@@ -125,7 +125,7 @@ export default function Autorizacion({ data }) {
 
     console.log({ updateComments });
 
-    fetch("http://localhost:3000/api/contracts", {
+    fetch("api/contracts", {
       method: "PATCH",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(updateComments),

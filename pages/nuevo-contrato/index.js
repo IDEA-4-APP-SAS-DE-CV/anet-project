@@ -73,7 +73,7 @@ export default function NuevoContrato() {
       CONTRACT_TEMPLATE.file.length > 0 &&
       CONTRACT_TEMPLATE.name
     ) {
-      fetch("http://localhost:3000/api/contracts", {
+      fetch("api/contracts", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(CONTRACT_TEMPLATE),
