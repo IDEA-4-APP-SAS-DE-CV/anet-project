@@ -76,7 +76,7 @@ export default function Menu({ viewMenu, setViewMenu }) {
             <Link href={"/contratos"} passHref>
               <Button
                 icon={<FcDocument fill="white" size="22px" />}
-                ccolor="success"
+                color="success"
                 rounded
               >
                 Contratos
@@ -86,7 +86,7 @@ export default function Menu({ viewMenu, setViewMenu }) {
             <Link href={"/proveedores"} passHref>
               <Button
                 icon={<FaBoxes fill="white" size="22px" />}
-                ccolor="success"
+                color="success"
                 rounded
               >
                 Proveedores
@@ -96,7 +96,7 @@ export default function Menu({ viewMenu, setViewMenu }) {
             <Link href={"/gastos"} passHref>
               <Button
                 icon={<IoCash fill="white" size="22px" />}
-                ccolor="success"
+                color="primary"
                 rounded
               >
                 Gastos
@@ -105,23 +105,25 @@ export default function Menu({ viewMenu, setViewMenu }) {
             <Spacer y={0.5} />
             <Button
               icon={<IoCarSportSharp fill="white" size="22px" />}
-              ccolor="success"
+              color="primary"
               rounded
             >
               Activos
             </Button>
             <Spacer y={0.5} />
-            <Button
-              icon={<IoCartSharp fill="white" size="22px" />}
-              ccolor="success"
-              rounded
-            >
-              Compras
-            </Button>
+            <Link href={"/compras"} passHref>
+              <Button
+                icon={<IoCartSharp fill="white" size="22px" />}
+                color="success"
+                rounded
+              >
+                Compras
+              </Button>
+            </Link>
             <Spacer y={0.5} />
             <Button
               icon={<IoWalletSharp fill="white" size="22px" />}
-              ccolor="success"
+              color="primary"
               rounded
             >
               Nomina
@@ -129,35 +131,39 @@ export default function Menu({ viewMenu, setViewMenu }) {
             <Spacer y={0.5} />
             <Button
               icon={<IoHammer fill="white" size="22px" />}
-              ccolor="success"
+              color="primary"
               rounded
             >
               Capacitación
             </Button>
             <Spacer y={0.5} />
-            <Button
-              icon={<IoAirplaneSharp fill="white" size="22px" />}
-              ccolor="success"
-              rounded
-            >
-              Viajes
-            </Button>
+            <Link href={"/viajes"} passHref>
+              <Button
+                icon={<IoAirplaneSharp fill="white" size="22px" />}
+                color="success"
+                rounded
+              >
+                Viajes
+              </Button>
+            </Link>
             <Spacer y={0.5} />
             <Button
               icon={<IoCalendarNumberSharp fill="white" size="22px" />}
-              ccolor="success"
+              color="primary"
               rounded
             >
               Eventos
             </Button>
             <Spacer y={0.5} />
-            <Button
-              icon={<IoHelpBuoySharp fill="white" size="22px" />}
-              ccolor="success"
-              rounded
-            >
-              Soporte
-            </Button>
+            <Link href={"/soporte"} passHref>
+              <Button
+                icon={<IoHelpBuoySharp fill="white" size="22px" />}
+                color="success"
+                rounded
+              >
+                Soporte
+              </Button>
+            </Link>
             <Spacer y={0.5} />
           </Grid>
         </Grid.Container>

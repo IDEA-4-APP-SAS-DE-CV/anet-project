@@ -1,0 +1,169 @@
+.blog{
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.menu{
+  min-width: 250px;
+  padding: 15px;
+}
+
+.titleMenu{
+  display: flex;
+  align-items: center;
+}
+
+.labelCategories{
+  margin-left: 10px;
+  position: relative;
+}
+
+.feed{
+  width: 600px;
+  padding: 10px;
+  overflow-y: scroll;
+}
+
+.internalFeed{
+  height: 100%;
+  position: inherit;
+}
+
+.post{
+  padding: 10px;
+  position: inherit;
+  background-color: var(--nextui-colors-primaryBg);
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+
+.title h5{
+  font-size: 18px;
+  margin: 0 0 10px 0;
+  line-height: 18px;
+}
+.title p{
+  font-size: 14px;
+  margin: 0 0 15px 0;
+}
+
+.title .name{
+  font-size: 11px;
+}
+
+.layoutImages{
+  width: 100%;
+}
+
+.layoutImages img{
+  width: 100%;
+}
+
+.titleComments{
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 20px;
+  background-color: var(--nextui-colors-secondaryBg);
+}
+
+.comments{
+  padding: 10px;
+  margin: 5px 5px;
+}
+
+.comment{
+  display: flex;
+  align-items: flex-start;
+
+}
+
+.comment .user{
+  min-width: 30px;
+  height: 30px;
+  background-color: cornflowerblue;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  margin-right: 10px;
+}
+
+.comment .text{
+  font-size: 13px;
+  font-weight: 400;
+  background-color: var(--nextui-colors-secondaryBg);
+  padding: 6px 10px;
+  border-radius: 10px;
+  width: 100%;
+}
+
+.countComments{}
+
+.comment .text .name{
+  margin: 0;
+  line-height: 12px;
+  font-size: 14px;
+  margin: 5px 0;
+  font-weight: 700;
+}
+
+.time{
+  padding-left: 50px;
+  font-size: 11px;
+  margin: 5px 0;
+}
+
+.listCategory{
+  margin: 0;
+  padding: 0;
+}
+
+.listCategory li{
+  margin: 2px 0;
+  padding: 5px 10px;
+  cursor: pointer;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+}
+
+.listCategory li:hover{
+  background-color: var(--nextui-colors-primaryBg);
+}
+
+.listCategory li span{
+  margin-left: 10px;
+}
+
+.users{
+  min-width: 300px;
+  padding: 15px;
+}
+
+.user{
+  margin: 10px 0;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  border-radius: 6px;
+}
+
+.user .photo{
+  width: 30px;
+  height: 30px;
+  background-color: cadetblue;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 10px;
+  border: 2px solid white;
+}
+
+.user:hover{
+  background-color: var(--nextui-colors-primaryBg); 
+}

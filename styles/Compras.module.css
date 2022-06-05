@@ -1,0 +1,28 @@
+.compras{
+  height: 800px;
+  width: 100%;
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+
+.container{
+  overflow-y: scroll;
+  width: 1100px;
+  height: 100%;
+  padding: 20px;
+}
+
+.searchTravels{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  margin-bottom: 15px;
+}
+
+.priority{
+  width: 400%;
+  height: 40px;
+  border-radius: 10px;
+}

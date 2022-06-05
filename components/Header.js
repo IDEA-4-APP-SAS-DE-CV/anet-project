@@ -57,10 +57,10 @@ export default function Header({ setViewMenu }) {
       <div className={styles.search}>
         <div className={styles.containerInputSearch}>
           <Input
-            size="sm"
-            label=""
-            placeholder="¿Buscas algo?"
             rounded
+            bordered
+            placeholder="¿Buscas algo?"
+            color="primary"
             css={{ minWidth: "400px" }}
             value={valueSearch}
             onChange={(e) => setValueSearch(e.target.value)}

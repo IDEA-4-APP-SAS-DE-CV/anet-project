@@ -1,4 +1,4 @@
-.providers{
+.viajes{
   height: 800px;
   width: 100%;
   position: relative;
@@ -13,6 +13,10 @@
   padding: 20px;
 }
 
-.searchProviders{
-  margin-bottom: 25px;
+.searchTravels{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  margin-bottom: 15px;
 }

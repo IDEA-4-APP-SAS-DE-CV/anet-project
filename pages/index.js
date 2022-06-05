@@ -1,15 +1,16 @@
 //Components
 import Layout from "@/components/Layout";
+import Blog from "@/components/Blog";
 
 //Styles
 import styles from "../styles/Home.module.css";
+
 
 export default function Home() {
   return (
     <Layout>
       <div className={styles.home}>
-        <h1>Pantalla de inicio (Dashboard)</h1>
-        <main>Esta secición muestra el contenido de cada categoría</main>
+        <Blog />
       </div>
     </Layout>
   );
