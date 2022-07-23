@@ -31,7 +31,9 @@ const TRAVELS = [
     email: "paulina.monroy@mercadolibre.com",
     description: "Persona en cargada de llevar el desarrollo de productos de tecnologia a nivel empresarial, tanto internamente como servicios dee 3ros",
     startDate: "04/Julio/2022",
-    endDate: "08/Julio/2022"
+    endDate: "08/Julio/2022",
+    country: " Argentina",
+    flagCountry: "🇦🇷 "
   },
   {
     id: 1,
@@ -44,7 +46,9 @@ const TRAVELS = [
     email: "jonathan.villordo@amiif.com",
     description: "Persona en cargada de llevar el desarrollo de productos de tecnologia a nivel empresarial, tanto internamente como servicios dee 3ros",
     startDate: "04/Julio/2022",
-    endDate: "08/Julio/2022"
+    endDate: "08/Julio/2022",
+    country: " Argentina",
+    flagCountry: "🇦🇷 "
   },{
     id: 1,
     name: "Fernando Robles",
@@ -56,7 +60,9 @@ const TRAVELS = [
     email: "fernando.robles@mercadolibre.com",
     description: "Persona en cargada de llevar el desarrollo de productos de tecnologia a nivel empresarial, tanto internamente como servicios dee 3ros",
     startDate: "04/Julio/2022",
-    endDate: "08/Julio/2022"
+    endDate: "08/Julio/2022",
+    country: " Argentina",
+    flagCountry: "🇦🇷 "
   },{
     id: 1,
     name: "Nancy Botello",
@@ -68,7 +74,9 @@ const TRAVELS = [
     email: "nancy.botello@gmail.com",
     description: "Persona en cargada de llevar el desarrollo de productos de tecnologia a nivel empresarial, tanto internamente como servicios dee 3ros",
     startDate: "04/Julio/2022",
-    endDate: "08/Julio/2022"
+    endDate: "08/Julio/2022",
+    country: " Argentina",
+    flagCountry: "🇦🇷 "
   },
   {
     id: 1,
@@ -81,7 +89,9 @@ const TRAVELS = [
     email: "paulina.monroy@mercadolibre.com",
     description: "Persona en cargada de llevar el desarrollo de productos de tecnologia a nivel empresarial, tanto internamente como servicios dee 3ros",
     startDate: "04/Julio/2022",
-    endDate: "08/Julio/2022"
+    endDate: "08/Julio/2022",
+    country: " Argentina",
+    flagCountry: "🇦🇷 "
   },
   {
     id: 1,
@@ -94,7 +104,9 @@ const TRAVELS = [
     email: "jonathan.villordo@amiif.com",
     description: "Persona en cargada de llevar el desarrollo de productos de tecnologia a nivel empresarial, tanto internamente como servicios dee 3ros",
     startDate: "04/Julio/2022",
-    endDate: "08/Julio/2022"
+    endDate: "08/Julio/2022",
+    country: " Argentina",
+    flagCountry: "🇦🇷 "
   },{
     id: 1,
     name: "Fernando Robles",
@@ -106,7 +118,9 @@ const TRAVELS = [
     email: "fernando.robles@mercadolibre.com",
     description: "Persona en cargada de llevar el desarrollo de productos de tecnologia a nivel empresarial, tanto internamente como servicios dee 3ros",
     startDate: "04/Julio/2022",
-    endDate: "08/Julio/2022"
+    endDate: "08/Julio/2022",
+    country: " Argentina",
+    flagCountry: "🇦🇷 "
   },{
     id: 1,
     name: "Nancy Botello",
@@ -118,7 +132,9 @@ const TRAVELS = [
     email: "nancy.botello@gmail.com",
     description: "Persona en cargada de llevar el desarrollo de productos de tecnologia a nivel empresarial, tanto internamente como servicios dee 3ros",
     startDate: "04/Julio/2022",
-    endDate: "08/Julio/2022"
+    endDate: "08/Julio/2022",
+    country: " Argentina",
+    flagCountry: "🇦🇷 "
   },
   {
     id: 1,
@@ -131,7 +147,9 @@ const TRAVELS = [
     email: "paulina.monroy@mercadolibre.com",
     description: "Persona en cargada de llevar el desarrollo de productos de tecnologia a nivel empresarial, tanto internamente como servicios dee 3ros",
     startDate: "04/Julio/2022",
-    endDate: "08/Julio/2022"
+    endDate: "08/Julio/2022",
+    country: " Argentina",
+    flagCountry: "🇦🇷 "
   },
   {
     id: 1,
@@ -144,7 +162,9 @@ const TRAVELS = [
     email: "jonathan.villordo@amiif.com",
     description: "Persona en cargada de llevar el desarrollo de productos de tecnologia a nivel empresarial, tanto internamente como servicios dee 3ros",
     startDate: "04/Julio/2022",
-    endDate: "08/Julio/2022"
+    endDate: "08/Julio/2022",
+    country: " Argentina",
+    flagCountry: "🇦🇷 "
   },{
     id: 1,
     name: "Fernando Robles",
@@ -156,7 +176,9 @@ const TRAVELS = [
     email: "fernando.robles@mercadolibre.com",
     description: "Persona en cargada de llevar el desarrollo de productos de tecnologia a nivel empresarial, tanto internamente como servicios dee 3ros",
     startDate: "04/Julio/2022",
-    endDate: "08/Julio/2022"
+    endDate: "08/Julio/2022",
+    country: " Argentina",
+    flagCountry: "🇦🇷 "
   },{
     id: 1,
     name: "Nancy Botello",
@@ -168,13 +190,15 @@ const TRAVELS = [
     email: "nancy.botello@gmail.com",
     description: "Persona en cargada de llevar el desarrollo de productos de tecnologia a nivel empresarial, tanto internamente como servicios dee 3ros",
     startDate: "04/Julio/2022",
-    endDate: "08/Julio/2022"
+    endDate: "08/Julio/2022",
+    country: " Argentina",
+    flagCountry: "🇦🇷 "
   },
 ]
 
 export default function Viajes() {
   const columns = [
-    { name: "Nombre", uid: "name" },
+    { name: "País", uid: "name" },
     { name: "Inicia", uid: "startDate" },
     { name: "Termina", uid: "endDate" },
     { name: "Estatus", uid: "status" },
@@ -204,15 +228,22 @@ export default function Viajes() {
     switch (columnKey) {
       case "name":
         return (
-          <User squared src={user.avatar} name={cellValue} css={{ p: 0 }}>
-            {user.email}
-          </User>
+          <Col>
+            <Row>
+              <Text b size={14} css={{ tt: "capitalize" }}>
+                {user.flagCountry}
+              </Text>
+              <Text b size={14} css={{ tt: "capitalize" }}>
+              {' - '}{user.country}
+              </Text>
+            </Row>
+          </Col>
         );
       case "startDate":
         return (
           <Col>
             <Row>
-              <Text b size={14} css={{ tt: "capitalize" }}>
+              <Text size={13} css={{ tt: "capitalize" }}>
                 {cellValue}
               </Text>
             </Row>
@@ -222,7 +253,7 @@ export default function Viajes() {
           return (
             <Col>
               <Row>
-                <Text b size={14} css={{ tt: "capitalize" }}>
+                <Text size={13} css={{ tt: "capitalize" }}>
                   {cellValue}
                 </Text>
               </Row>

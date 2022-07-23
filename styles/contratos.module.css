@@ -1,9 +1,24 @@
 .contracts{
+  height: 800px;
+  width: 100%;
+  position: relative;
   display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: center;
+  justify-content: center;
+}
+
+.container{
+  overflow-y: scroll;
+  width: 1200px;
+  height: 100%;
   padding: 20px;
+}
+
+.searchBar{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  margin-bottom: 15px;
 }
 
 .headContracts{

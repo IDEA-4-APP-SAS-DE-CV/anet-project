@@ -1,0 +1,11 @@
+.section{
+  border: 1px solid red;
+  width: 75%;
+  border-radius: 30px;
+  height: 42px;
+  padding: 0 10px;
+  font-size: 14px;
+  color: gray;
+  font-weight: 400;
+  border: 2px solid #eaeaea;
+}

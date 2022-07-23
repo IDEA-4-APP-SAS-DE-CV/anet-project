@@ -18,185 +18,210 @@ import styles from "@/styles/proveedores.module.css";
 const PROVIDERS = [
   {
     id: 1,
-    name: "Fernando Robles Rivera",
-    role: "Software developer",
-    team: "Management",
-    status: "paused",
-    age: "29",
-    avatar: "/images/fer.jpeg",
-    email: "fernando.robles@mercadolibre.com",
-    description: "Persona en cargada de llevar el desarrollo de productos de tecnologia a nivel empresarial, tanto internamente como servicios dee 3ros"
-  },
-  {
-    id: 1,
-    name: "Nancy Botello",
+    companyName: "Astra Zeneca",
+    logo: "/images/astra-zeneca.png",
+    contactName: "Nancy Botello",
     role: "Project Manager",
     team: "Management",
     status: "active",
     age: "38",
-    avatar: "/images/nancy.png",
     email: "nancyy2@gmail.com",
+    phone: "5638378290",
     description: "Persona en cargada de llevar el desarrollo de productos de tecnologia a nivel empresarial, tanto internamente como servicios dee 3ros"
   },{
     id: 1,
-    name: "Paulina Monrroy",
+    companyName: "Astra Zeneca",
+    logo: "/images/astra-zeneca.png",
+    contactName: "Paulina Monrroy",
     role: "Project Leader",
     team: "Management",
     status: "active",
     age: "32",
-    avatar: "/images/paulina.png",
     email: "paulina.monroy@mercadolibre.com",
+    phone: "5638378290",
     description: "Persona en cargada de llevar el desarrollo de productos de tecnologia a nivel empresarial, tanto internamente como servicios dee 3ros"
   },{
     id: 1,
-    name: "Jonathan Villordo",
+    companyName: "Astra Zeneca",
+    logo: "/images/astra-zeneca.png",
+    contactName: "Jonathan Villordo",
     role: "Infraestrcutura",
     team: "Management",
     status: "active",
     age: "38",
-    avatar: "/images/jonathan.png",
     email: "jan.merol@gmail.com",
+    phone: "5638378290",
     description: "Persona en cargada de llevar el desarrollo de productos de tecnologia a nivel empresarial, tanto internamente como servicios dee 3ros"
   },
   {
     id: 1,
-    name: "Fernando Robles Rivera",
+    companyName: "Astra Zeneca",
+    logo: "/images/astra-zeneca.png",
+    contactName: "Fernando Robles Rivera",
     role: "Software developer",
     team: "Management",
     status: "paused",
     age: "29",
-    avatar: "/images/fer.jpeg",
     email: "fernando.robles@mercadolibre.com",
+    phone: "5638378290",
     description: "Persona en cargada de llevar el desarrollo de productos de tecnologia a nivel empresarial, tanto internamente como servicios dee 3ros"
   },
   {
     id: 1,
-    name: "Nancy Botello",
+    companyName: "Astra Zeneca",
+    logo: "/images/astra-zeneca.png",
+    contactName: "Nancy Botello",
     role: "Project Manager",
     team: "Management",
     status: "active",
     age: "38",
-    avatar: "/images/nancy.png",
     email: "nancyy2@gmail.com",
+    phone: "5638378290",
     description: "Persona en cargada de llevar el desarrollo de productos de tecnologia a nivel empresarial, tanto internamente como servicios dee 3ros"
   },{
     id: 1,
-    name: "Paulina Monrroy",
+    companyName: "Astra Zeneca",
+    logo: "/images/astra-zeneca.png",
+    contactName: "Paulina Monrroy",
     role: "Project Leader",
     team: "Management",
     status: "active",
     age: "32",
-    avatar: "/images/paulina.png",
     email: "paulina.monroy@mercadolibre.com",
+    phone: "5638378290",
     description: "Persona en cargada de llevar el desarrollo de productos de tecnologia a nivel empresarial, tanto internamente como servicios dee 3ros"
   },{
     id: 1,
-    name: "Jonathan Villordo",
+    companyName: "Astra Zeneca",
+    logo: "/images/astra-zeneca.png",
+    contactName: "Jonathan Villordo",
     role: "Infraestrcutura",
     team: "Management",
     status: "active",
     age: "38",
-    avatar: "/images/jonathan.png",
     email: "jan.merol@gmail.com",
+    phone: "5638378290",
     description: "Persona en cargada de llevar el desarrollo de productos de tecnologia a nivel empresarial, tanto internamente como servicios dee 3ros"
   },
   {
     id: 1,
-    name: "Fernando Robles Rivera",
+    companyName: "Astra Zeneca",
+    logo: "/images/astra-zeneca.png",
+    contactName: "Fernando Robles Rivera",
     role: "Software developer",
     team: "Management",
     status: "paused",
     age: "29",
-    avatar: "/images/fer.jpeg",
     email: "fernando.robles@mercadolibre.com",
+    phone: "5638378290",
     description: "Persona en cargada de llevar el desarrollo de productos de tecnologia a nivel empresarial, tanto internamente como servicios dee 3ros"
   },
   {
     id: 1,
-    name: "Nancy Botello",
+    companyName: "Astra Zeneca",
+    logo: "/images/astra-zeneca.png",
+    contactName: "Nancy Botello",
     role: "Project Manager",
     team: "Management",
     status: "active",
     age: "38",
-    avatar: "/images/nancy.png",
     email: "nancyy2@gmail.com",
+    phone: "5638378290",
     description: "Persona en cargada de llevar el desarrollo de productos de tecnologia a nivel empresarial, tanto internamente como servicios dee 3ros"
   },{
     id: 1,
-    name: "Paulina Monrroy",
+    companyName: "Astra Zeneca",
+    logo: "/images/astra-zeneca.png",
+    contactName: "Paulina Monrroy",
     role: "Project Leader",
     team: "Management",
     status: "active",
     age: "32",
-    avatar: "/images/paulina.png",
     email: "paulina.monroy@mercadolibre.com",
+    phone: "5638378290",
     description: "Persona en cargada de llevar el desarrollo de productos de tecnologia a nivel empresarial, tanto internamente como servicios dee 3ros"
   },{
     id: 1,
-    name: "Jonathan Villordo",
+    companyName: "Astra Zeneca",
+    logo: "/images/astra-zeneca.png",
+    contactName: "Jonathan Villordo",
     role: "Infraestrcutura",
     team: "Management",
     status: "active",
     age: "38",
-    avatar: "/images/jonathan.png",
     email: "jan.merol@gmail.com",
+    phone: "5638378290",
     description: "Persona en cargada de llevar el desarrollo de productos de tecnologia a nivel empresarial, tanto internamente como servicios dee 3ros"
   },
   {
     id: 1,
-    name: "Fernando Robles Rivera",
+    companyName: "Astra Zeneca",
+    logo: "/images/astra-zeneca.png",
+    contactName: "Fernando Robles Rivera",
     role: "Software developer",
     team: "Management",
     status: "paused",
     age: "29",
-    avatar: "/images/fer.jpeg",
     email: "fernando.robles@mercadolibre.com",
+    phone: "5638378290",
     description: "Persona en cargada de llevar el desarrollo de productos de tecnologia a nivel empresarial, tanto internamente como servicios dee 3ros"
   },
   {
     id: 1,
-    name: "Nancy Botello",
+    companyName: "Astra Zeneca",
+    logo: "/images/astra-zeneca.png",
+    contactName: "Nancy Botello",
     role: "Project Manager",
     team: "Management",
     status: "active",
     age: "38",
-    avatar: "/images/nancy.png",
     email: "nancyy2@gmail.com",
+    phone: "5638378290",
     description: "Persona en cargada de llevar el desarrollo de productos de tecnologia a nivel empresarial, tanto internamente como servicios dee 3ros"
   },{
     id: 1,
-    name: "Paulina Monrroy",
+    companyName: "Astra Zeneca",
+    logo: "/images/astra-zeneca.png",
+    contactName: "Paulina Monrroy",
     role: "Project Leader",
     team: "Management",
     status: "active",
     age: "32",
-    avatar: "/images/paulina.png",
     email: "paulina.monroy@mercadolibre.com",
+    phone: "5638378290",
     description: "Persona en cargada de llevar el desarrollo de productos de tecnologia a nivel empresarial, tanto internamente como servicios dee 3ros"
   },{
     id: 1,
-    name: "Jonathan Villordo",
+    companyName: "Astra Zeneca",
+    logo: "/images/astra-zeneca.png",
+    contactName: "Jonathan Villordo",
     role: "Infraestrcutura",
     team: "Management",
     status: "active",
     age: "38",
-    avatar: "/images/jonathan.png",
     email: "jan.merol@gmail.com",
+    phone: "5638378290",
     description: "Persona en cargada de llevar el desarrollo de productos de tecnologia a nivel empresarial, tanto internamente como servicios dee 3ros"
   },
 ]
 
 export default function Proveedores() {
   const columns = [
-    { name: "Nombre", uid: "name" },
-    { name: "Rol", uid: "role" },
-    { name: "Estatus", uid: "status" },
+    { name: "Compañia", uid: "company" },
+    { name: "Descripción", uid: "role" },
+    { name: "Estatus", uid: "data" },
     { name: "Acciones", uid: "actions" },
   ];
   const [valueSearch, setValueSearch] = useState("");
   const renderCell = (user, columnKey) => {
     const cellValue = user[columnKey];
     switch (columnKey) {
+      case "company":
+        return (
+          <User squared src={user.logo} name={cellValue} css={{ p: 0 }}>
+            {user.companyName}
+          </User>
+        );
       case "name":
         return (
           <User squared src={user.avatar} name={cellValue} css={{ p: 0 }}>
@@ -218,8 +243,26 @@ export default function Proveedores() {
             </Row>
           </Col>
         );
-      case "status":
-        return <StyledBadge type={user.status}>{cellValue}</StyledBadge>;
+      case "data":
+        return (
+          <Col>
+            <Row>
+              <Text b size={14} css={{ tt: "capitalize" }}>
+                {user?.contactName}
+              </Text>
+            </Row>
+            <Row>
+              <Text size={12} css={{ tt: "capitalize", color: "$accents7" }}>
+                {user.email}
+              </Text>
+            </Row>
+            <Row>
+              <Text size={12} css={{ tt: "capitalize", color: "$accents7" }}>
+                {user.phone}
+              </Text>
+            </Row>
+          </Col>
+        );
 
       case "actions":
         return (
